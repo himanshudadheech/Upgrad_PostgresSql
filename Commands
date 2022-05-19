@@ -63,3 +63,10 @@ upgrad=# select * from transaction;
  HDFC7612  | B          | 09/09/2020 | 45261
  ICICI1010 | E          | 12-12-2020 | 10298
 (4 rows)
+upgrad=# SELECT transaction.Check_no, transaction.Date, transaction.Amount FROM transaction INNER JOIN Company ON transaction.Company_id = Company.Company_id;
+ check_no  |    date    | amount
+-----------+------------+--------
+ SBI1234   | 18/01/2020 | 19877
+ HDFC7612  | 09/09/2020 | 45261
+ ICICI1010 | 12-12-2020 | 10298
+(3 rows)
